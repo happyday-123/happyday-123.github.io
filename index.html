@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>이성진 소개 페이지</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      max-width: 800px;
+      margin: auto;
+      padding: 40px;
+    }
+
+    .intro {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+
+    .intro-text {
+      flex: 1;
+      padding-right: 20px;
+    }
+
+    .profile-img {
+      width: 360px; /* 확대된 크기 */
+      height: auto;
+      border-radius: 10px;
+    }
+
+    h1, h2 {
+      color: #2c3e50;
+    }
+
+    .section {
+      margin-bottom: 20px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 10px;
+    }
+
+    button {
+      padding: 10px 15px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #2c3e50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .content {
+      display: none;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="intro">
+    <div class="intro-text">
+      <h1>안녕하세요. 이성진입니다.</h1>
+      <p>성격 좋아요. 긍정적이고 책임감 있게 업무에 임합니다.</p>
+    </div>
+    <img src="a.png" alt="이성진 프로필 사진" class="profile-img">
+  </div>
+
+  <div class="section">
+    <button onclick="toggleContent('career')">학력 및 경력 보기</button>
+    <div id="career" class="content">
+      <p>인하대학교 기계공학과 졸업</p>
+      <p>자동차 설계 분야에서 25년간 경력을 쌓아왔습니다.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <button onclick="toggleContent('skills')">보유 기술 보기</button>
+    <div id="skills" class="content">
+      <ul>
+        <li>자동차 인테리어 및 익스테리어 설계</li>
+        <li>CAD 및 3D 모델링 툴 숙련</li>
+        <li>제품 개발 및 양산 대응 경험</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <button onclick="toggleContent('projects')">프로젝트 보기</button>
+    <div id="projects" class="content">
+      <p>수많은 차량 설계 프로젝트에 참여하여 양산 모델 개발을 성공적으로 수행했습니다.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <button onclick="toggleContent('contact')">연락처 보기</button>
+    <div id="contact" class="content">
+      <p>📞 010-7292-5619</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <button onclick="toggleContent('family')">가족 보기</button>
+    <div id="family" class="content">
+      <ul>
+        <li>👩 아내 – 따뜻하고 이해심 많은 동반자</li>
+        <li>👨‍🎓 아들 – 대학생, 미래의 엔지니어</li>
+        <li>👧 딸 – 중학생, 창의력 넘치는 학생</li>
+      </ul>
+       <img src="b.png" alt="가족 사진" style="width: 100%; max-width: 600px; border-radius: 10px; margin-top: 15px;">
+    </div>
+  </div>
+
+  <script>
+    function toggleContent(id) {
+      var content = document.getElementById(id);
+      if (content.style.display === "none" || content.style.display === "") {
+        content.style.display = "block";
+      } else {
+        content.style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+</html>
